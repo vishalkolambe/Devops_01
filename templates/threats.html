@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Threats</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        CyberShield - Protecting Your Digital World
+    </header>
+
+    <nav>
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('threats') }}">Cyber Threats</a>
+        <a href="{{ url_for('tools') }}">Security Tools</a>
+        <a href="{{ url_for('contact') }}">Contact</a>
+    </nav>
+
+    <div class="threat-container">
+        <div class="threat-content">
+            <h2>Understanding Cyber Threats</h2>
+            <p>Cyber threats are malicious activities that aim to steal, damage, or disrupt digital assets and sensitive information. These threats come in various forms, including:</p>
+            <ul>
+                <li><b>Phishing Attacks:</b> Fraudulent emails or messages tricking users into revealing personal information.</li>
+                <li><b>Malware:</b> Software designed to harm or exploit devices, networks, and systems.</li>
+                <li><b>Ransomware:</b> Malware that encrypts files and demands a ransom for decryption.</li>
+                <li><b>Social Engineering:</b> Manipulating individuals into revealing confidential data.</li>
+                <li><b>Denial-of-Service (DoS) Attacks:</b> Overloading a network to make it unavailable.</li>
+            </ul>
+            <p>To stay safe, always update your software, use strong passwords, and be cautious of suspicious emails.</p>
+            <button onclick="window.location.href='{{ url_for('home') }}'">Learn More</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 CyberShield. All rights reserved.</p>
+    </footer>
+</body>
+</html>
