@@ -26,4 +26,5 @@ jobs:
 
       - name: Deploy Flask App to EC2
         run: |
-          ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa ec2-user@ec2-52-214-31-129.eu-west-1.compute.amazonaws.com "cd /path/to/your/app && docker-compose down && docker-compose up -d"
+          # SSH into EC2 instance and navigate to the flask-app directory
+          ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa ec2-user@ec2-52-214-31-129.eu-west-1.compute.amazonaws.com "cd flask-app && docker-compose down && docker-compose up -d"
